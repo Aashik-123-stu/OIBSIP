@@ -2,17 +2,17 @@
 
 A responsive static landing page developed for **Track: Web Development & Designing — Level 1, Task 1**.
 
-## 🔗 Live Preview
+# 🔗 Live Preview
 _(Place your GitHub Pages URL link here after deployment — instructions below)_
 
-## 🛠 Tech Stack
+# 🛠 Tech Stack
 - HTML5
 - CSS3 (Flexbox + Grid, without a framework)
 - Google Fonts (Fraunces + Work Sans)
 
-##  File Structure
+#  File Structure
 ```
-Savera-coffee-roasters/
+WebDev-L1-LandingPage/
 ├── index.html            # All page content markup
 ├── css/
 │   └── style.css         # All styles (tokens, layout, components, media queries)
@@ -20,7 +20,7 @@ Savera-coffee-roasters/
 └── README.md
 ```
 
-##  Features List
+#  Features List
 - [x] Sticky nav with 4 links (Process, About, Visit, Order Beans CTA)
 - [x] Hero section — eyebrow, heading, subheading, two CTAs
 - [x] 3 separate content sections — Process (features), About, Testimonials
@@ -31,7 +31,7 @@ Savera-coffee-roasters/
 - [x] Typography scale including different display (Fraunces) vs body (Work Sans) faces,
       and various font sizes (h1/h2/h3/body/small)
 
-##  Design Tokens
+# Design Tokens
 | Token       | Value             | Purpose                 |
 | ----------- | ------------------ | ----------------------- |
 | `--color-espresso`  | `#2B1B12`  | Main text, footer bg color |
@@ -40,10 +40,9 @@ Savera-coffee-roasters/
 | `--color-gold`      | `#d4eb55`  | Secondary accent       |
 | `--color-charcoal`  | `#3A2E27`  | Body text              |
 
-##  Running Locally
+#  Running Locally
 No building needed! It’s a static webpage.
 ```bash
-git clone https://github.com/<your-username>/Savera-coffee-roasters.git
 
-## Inspiration Sources
+# Inspiration Sources
 Layout learned from youtubes guides
