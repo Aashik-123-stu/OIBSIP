@@ -1,0 +1,450 @@
+/* ---------- 1. RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ---------- 2. DESIGN TOKENS ---------- */
+:root {
+  /* Color palette — grounded in roasted coffee & fire */
+  --color-espresso: #2B1B12;   /* near-black brown, primary text/dark bg */
+  --color-cream: #e5e5b5;      /* warm background */
+  --color-rust: #bb9883;       /* primary accent — CTA, highlights */
+  --color-gold: #d4eb55;       /* secondary accent — steam, details */
+  --color-charcoal: #3A2E27;   /* body text on light bg */
+  --color-white: #FFFDF9;
+
+  /* Typography scale */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Work Sans', 'Segoe UI', sans-serif;
+
+  --fs-h1: clamp(2.25rem, 5vw, 3.75rem);
+  --fs-h2: clamp(1.75rem, 3.5vw, 2.5rem);
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+
+  /* Spacing */
+  --space-sm: 0.75rem;
+  --space-md: 1.5rem;
+  --space-lg: 3rem;
+  --space-xl: 6rem;
+
+  --radius: 10px;
+  --max-width: 1180px;
+}
+
+/* ---------- 3. BASE TYPE ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  color: var(--color-charcoal);
+  background: var(--color-white);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  color: var(--color-espresso);
+  line-height: 1.15;
+  font-weight: 600;
+}
+
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); font-weight: 600; }
+
+p { font-size: var(--fs-body); }
+
+.eyebrow {
+  font-size: var(--fs-small);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-rust);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+/* ---------- 4. LAYOUT UTILITIES ---------- */
+.grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: var(--fs-small);
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn--primary {
+  background: var(--color-rust);
+  color: var(--color-white);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--color-espresso);
+  border: 1.5px solid var(--color-espresso);
+}
+
+/* ---------- 5. NAVBAR ---------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(250, 243, 232, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(43, 27, 18, 0.08);
+}
+
+.navbar__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__logo {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-espresso);
+}
+
+.navbar__logo span {
+  color: var(--color-rust);
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  font-size: var(--fs-small);
+  font-weight: 500;
+}
+
+.navbar__links a:hover {
+  color: var(--color-rust);
+}
+
+.navbar__cta {
+  background: var(--color-espresso);
+  color: var(--color-white) !important;
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius);
+}
+
+.navbar__cta:hover {
+  background: var(--color-rust);
+}
+
+/* ---------- 6. HERO ---------- */
+.hero {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg);
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--color-rust);
+}
+
+.hero__subhead {
+  margin: var(--space-md) 0 var(--space-lg);
+  max-width: 42ch;
+  color: var(--color-charcoal);
+}
+
+.hero__actions {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.hero__art {
+  display: flex;
+  justify-content: center;
+}
+
+.hero__art svg {
+  width: 100%;
+  max-width: 380px;
+}
+
+/* ---------- 7. SECTIONS / CARDS ---------- */
+.section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg);
+}
+
+.section--muted {
+  max-width: 100%;
+  background: var(--color-cream);
+}
+
+.section--muted .about {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg);
+}
+
+.section__header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto var(--space-lg);
+}
+
+.card {
+  background: var(--color-white);
+  border: 1px solid rgba(43, 27, 18, 0.08);
+  border-radius: var(--radius);
+  padding: var(--space-lg) var(--space-md);
+}
+
+.card__mark {
+  display: inline-block;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-rust);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-sm);
+}
+
+.card h3 {
+  margin-bottom: var(--space-sm);
+}
+
+.card p {
+  color: var(--color-charcoal);
+}
+
+/* ---------- 8. ABOUT ---------- */
+.about {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+.about__text p {
+  margin-top: var(--space-md);
+  color: var(--color-charcoal);
+}
+
+.about__stats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.stat {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+  border-left: 4px solid var(--color-rust);
+}
+
+.stat__num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--color-espresso);
+  font-weight: 700;
+}
+
+.stat__label {
+  font-size: var(--fs-small);
+  color: var(--color-charcoal);
+}
+
+/* ---------- 9. TESTIMONIALS ---------- */
+.quote {
+  background: var(--color-cream);
+  border-radius: var(--radius);
+  padding: var(--space-lg) var(--space-md);
+}
+
+.quote p {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--color-espresso);
+  margin-bottom: var(--space-md);
+}
+
+.quote cite {
+  font-style: normal;
+  font-size: var(--fs-small);
+  color: var(--color-rust);
+  font-weight: 600;
+}
+
+/* ---------- 10. FOOTER ---------- */
+.footer {
+  background: var(--color-espresso);
+  color: var(--color-cream);
+  padding: var(--space-xl) var(--space-lg) var(--space-md);
+}
+
+.footer__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: var(--space-lg);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid rgba(250, 243, 232, 0.15);
+}
+
+.footer .navbar__logo {
+  color: var(--color-cream);
+}
+
+.footer__brand p {
+  margin-top: var(--space-sm);
+  color: rgba(250, 243, 232, 0.7);
+  font-size: var(--fs-small);
+}
+
+.footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.footer__col h4 {
+  font-size: var(--fs-small);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-gold);
+  margin-bottom: var(--space-sm);
+}
+
+.footer__col a {
+  font-size: var(--fs-small);
+  color: rgba(250, 243, 232, 0.85);
+}
+
+.footer__col a:hover {
+  color: var(--color-white);
+}
+
+.footer__bottom {
+  text-align: center;
+  font-size: var(--fs-small);
+  color: rgba(250, 243, 232, 0.5);
+  padding-top: var(--space-md);
+}
+
+/* ---------- 11. MEDIA QUERIES ---------- */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: left;
+    padding-top: var(--space-lg);
+  }
+
+  .hero__art {
+    order: -1;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .about__stats {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    flex: 1 1 30%;
+  }
+
+  .footer__inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer__brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 700px) {
+  .grid--3 {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar__inner {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .navbar__links {
+    gap: var(--space-md);
+    font-size: 0.8rem;
+  }
+
+  .section, .hero {
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar__links a:not(.navbar__cta) {
+    display: none; /* collapse text links, keep logo + primary CTA visible */
+  }
+
+  .hero__actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    text-align: center;
+  }
+
+  .footer__inner {
+    grid-template-columns: 1fr;
+  }
+}
