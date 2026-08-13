@@ -3,7 +3,7 @@
 A responsive static landing page developed for **Track: Web Development & Designing — Level 1, Task 1**.
 
 # 🔗 Live Preview
-https://aashik-123-stu.github.io/OIBSIP/
+https://aashik-123-stu.github.io/OIBSIP/WebDev-L1(Task-1)-LandingPage/
 
 # 🛠 Tech Stack
 - HTML5
