@@ -3,7 +3,7 @@
 A responsive **Personal Portfolio Website** created with the help of **HTML5 and CSS3**. This project demonstrates my profile, skills, projects and contact details through a user-friendly website.
 
 # 🔗 Live Preview
-🚀 Live Demo: [Add your deployed project link here]
+🚀 Live Demo: https://aashik-123-stu.github.io/OIBSIP/WebDev-L1(Task-2)-PersonalPorfolio/
 
 # Features
 * Responsive and user-friendly website
