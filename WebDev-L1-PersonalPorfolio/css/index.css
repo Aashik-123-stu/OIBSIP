@@ -1,0 +1,102 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+  /* background-color: #92a8d1;  */
+  background-image :url("../background.jpg");
+  background-size: cover;
+  text-align: center;
+}
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-image : url("../portfolio.jpg"); 
+    background-size: cover;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+h1 {
+    color: #333;
+    font-size: 26px;
+}
+.subtitle {
+    color: #777;
+    font-size: 18px;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ff6600;
+    font-weight: bold;
+}
+
+h2 {
+    color: #444;
+    border-bottom: 2px solid #ff6600;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.skill-list span {
+    background: #ff6600;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.project-card {
+    background: #fafafa;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+table{
+    margin: 0 auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+th,td{
+    padding: 10px;
+}
+
+blockquote {
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.9);
+    margin: 10px 0;
+}
+
+.contact a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 15px;
+    color: #555;
+}
+me{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
